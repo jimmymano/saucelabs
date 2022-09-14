@@ -21,7 +21,7 @@ class BasePage {
       await this.find(locator).sendKeys(inputText)
     }
   
-    async isDisplayed(locator) {
+    async isDisplayed(locator,timeout) {
         if (timeout) {
             await this.driver.wait(Until.elementLocated(locator),timeout)
             await this.driver.wait(Until.elementIsVisible(this.find(locator)),timeout)
