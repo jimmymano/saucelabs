@@ -26,4 +26,10 @@ describe('Dynamic Loading', function() {
       await dynamicLoading.isFinishTextPresent(),true, 'Finish text not displayed'
     )
   })
+  it('rendered element', async function() {
+    await dynamicLoading.loadExample('2')
+    assert(
+      await dynamicLoading.isFinishTextPresent(), true, 'Finish text not displayed'
+    )
+  })
 })
