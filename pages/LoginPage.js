@@ -13,7 +13,7 @@ class LoginPage extends BasePage {
   }
 
   async load() {
-    await this.driver.get('http://the-internet.herokuapp.com/login')
+    await this.visit('/login')
     
     if(!(await this.driver.findElement(LOGIN_FORM).isDisplayed()))
     throw new Error('Login form not loaded')

@@ -12,7 +12,7 @@ class DynamicLoadingPage extends BasePage {
 
   async loadExample(exampleNumber) {
     await this.visit(
-      'http://the-internet.herokuapp.com/dynamic_loading/' + exampleNumber
+      '/dynamic_loading/' + exampleNumber
     )
     await this.click(START_BUTTON)
   }
